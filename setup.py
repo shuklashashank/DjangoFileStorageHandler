@@ -5,6 +5,6 @@ setup(name='DjangoFileStorageHandler',
       description=('You can handle your storage files to MINIO, S3 or Local through Settings'),
       author='Shashank Shukla',
       author_email='shuklashashank@outlook.com',
-      url='',
+      url='http://pypi.python.org/pypi/DjangoFileStorageHandler',
       install_requires =['minio>=3.0.4', 'requests>=2.18.2', 'boto3>=1.5.19', 'Django>=1.11'],
      )
