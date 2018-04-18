@@ -93,7 +93,7 @@ class ServerStorage(object):
         """
         fs = FileSystemStorage()
         if fs.exists(settings.BASE_DIR + self.path + self.filename):
-            return open(settings.BASE_DIR + self.path + self.filename, "rb").read()
+            return {'success':1, 'file':open(settings.BASE_DIR + self.path + self.filename, "rb").read()}
         return {'success': 0, 'message': 'File not found'}
 
     def get_file_base64(self):
@@ -182,7 +182,7 @@ class S3Storage(object):
                                             ExpiresIn=600)
             response = requests.get(url)
             # if response.status_code == 200:
-            return response._content
+            return {'success': 1, 'file':response._content}
         except Exception as e:
             return {'success': 0, 'message': str(e)}
 
@@ -288,7 +288,7 @@ class MinioStorage(object):
                                                    expires=timedelta(seconds=600))
             response = requests.get(url)
             # if response.status_code == 200:
-            return response._content
+            return {'success': 1, 'file': response._content}
         except Exception as e:
             return {'success': 0, 'message': str(e)}
 
