@@ -8,7 +8,6 @@ This project is useful if you want to store and serve your file to different typ
 Installation
 ------------
 To install DjangoFileStoragesHandler, simply use pip:
-.. code-block:: bash
 
     $ pip install DjangoFileStoragesHandler
 
@@ -17,46 +16,38 @@ Documentation
 You need to add few variables in your settings.py .
 
 FILE_STORAGE_TO: This can be s3, local or Minio as per your need.
-.. code-block:: python
 
      FILE_STORAGE_TO = 's3' / 'local' / 'minio'
  
 BUCKET_NAME: Enter the bucket name
-.. code-block:: python
 
      BUCKET_NAME = '*******' 
      
 SUPPORTED_FORMAT_LIST
 
-.. code-block:: python
 
      SUPPORTED_FORMAT_LIST = ['.pdf', '.png', '.bmp', '.jpeg', '.jpg', '.doc', '.txt', '.docx', '.PDF', '.PNG', '.BMP',
                             '.JPEG', '.JPG', '.DOC', '.TXT', '.DOCX']
      
 In case of AWS S3 you need to add below keys:
 AWS_ACCESS_KEY: Access key of AWS
-.. code-block:: python
 
      AWS_ACCESS_KEY = '************' 
      
 AWS_SECRET_KEY: SECRET Access key of AWS
-.. code-block:: python
 
      AWS_SECRET_KEY = '************' 
      
 AWS_REGION_NAME: Region name AWS
-.. code-block:: python
 
      AWS_REGION_NAME = '*******' 
      
 In case of Minio:
 MINIO_ACCESS_KEY: Add Minio Access key.
-.. code-block:: python
 
      MINIO_ACCESS_KEY = '*******' 
      
 MINIO_SECURE: Add MINIO SECURE key
-.. code-block:: python
 
      MINIO_SECURE = '*******' 
 
